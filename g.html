@@ -77,10 +77,15 @@ ul, #myUL {
 
 </head>
 <body>
+
 <font face=arial>
 <h2>Information Surfing in 3 Clicks (simple HTML page)</h2>
 
-
+<form action="/form/submit" method="GET">
+  <input type="text" name="text" class="search" placeholder="Search all">
+  <input type="submit" name="submit" class="submit" value="Search">
+</form>
+<br>
 <div class="row">
   <div class="column" style="background-color:#1aaa;">
     <h2>Description 1</h2>
@@ -231,6 +236,7 @@ for (i = 0; i < toggler.length; i++) {
   });
 }
 </script>
+
 
 Copyright 2023, XYZ Corporation. All rights reserved.
 
