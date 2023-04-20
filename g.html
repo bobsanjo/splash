@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Create four equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 25%;
+  padding: 10px;
+  height: 700px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+</style>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+ul, #myUL {
+  list-style-type: none;
+}
+
+#myUL {
+  margin: 0;
+  padding: 0;
+}
+
+.caret {
+  cursor: pointer;
+  -webkit-user-select: none; /* Safari 3.1+ */
+  -moz-user-select: none; /* Firefox 2+ */
+  -ms-user-select: none; /* IE 10+ */
+  user-select: none;
+}
+
+.caret::before {
+  content: "\25B6";
+  color: black;
+  display: inline-block;
+  margin-right: 6px;
+}
+
+.caret-down::before {
+  -ms-transform: rotate(90deg); /* IE 9 */
+  -webkit-transform: rotate(90deg); /* Safari */'
+  transform: rotate(90deg);
+}
+
+.nested {
+  display: none;
+}
+
+.active {
+  display: block;
+}
+</style>
+
+
+</head>
+<body>
+<h2>Three Clicks to Find Information</h2>
+
+<img src="https://images.dog.ceo/breeds/terrier-dandie/n02096437_1790.jpg" width=5%>
+
+<div class="row">
+  <div class="column" style="background-color:#1aaa;">
+    <h2>Description 1</h2>
+    <ul id="myUL">
+	  <li><span class="caret">Beverages</span>
+	    <ul class="nested">
+	      <li>Water</li>
+	      <li>Coffee</li>
+	      <li><span class="caret">Tea</span>
+	        <ul class="nested">
+	          <li>Black Tea</li>
+	          <li>White Tea</li>
+	          <li><span class="caret">Green Tea</span>
+	            <ul class="nested">
+	              <li><a href="http://agilent.com">Sencha</a></li>
+	              <li>Gyokuro</li>
+	              <li>Matcha</li>
+	              <li>Pi Lo Chun</li>
+	                 <li><span class="caret">Green Tea</span>
+	            <ul class="nested">
+	              <li><a href="http://agilent.com">Sencha</a></li>
+	              <li>Gyokuro</li>
+	              <li>Matcha</li>
+	              <li>Pi Lo Chun</li>
+
+	            </ul>
+	            </ul>
+	          </li>
+	        </ul>
+	      </li>
+	    </ul>
+	  </li>
+</ul>
+  </div>
+  <div class="column" style="background-color:#bbb;">
+    <h2>Description 2</h2>
+     <ul id="myUL">
+		  <li><span class="caret">Beverages</span>
+		    <ul class="nested">
+		      <li>Water</li>
+		      <li>Coffee</li>
+		      <li><span class="caret">Tea</span>
+		        <ul class="nested">
+		          <li>Black Tea</li>
+		          <li>White Tea</li>
+		          <li><span class="caret">Green Tea</span>
+		            <ul class="nested">
+		              <li><a href="http://agilent.com">Sencha</a></li>
+		              <li>Gyokuro</li>
+		              <li>Matcha</li>
+		              <li>Pi Lo Chun</li>
+		            </ul>
+		          </li>
+		        </ul>
+		      </li>
+		    </ul>
+		  </li>
+</ul>
+  </div>
+  <div class="column" style="background-color:#ecc;">
+    <h2>Description 3</h2>
+     <ul id="myUL">
+		  <li><span class="caret">Beverages</span>
+		    <ul class="nested">
+		      <li>Water</li>
+		      <li>Coffee</li>
+		      <li><span class="caret">Tea</span>
+		        <ul class="nested">
+		          <li>Black Tea</li>
+		          <li>White Tea</li>
+		          <li><span class="caret">Green Tea</span>
+		            <ul class="nested">
+		              <li><a href="http://agilent.com">Sencha</a></li>
+		              <li>Gyokuro</li>
+		              <li>Matcha</li>
+		              <li>Pi Lo Chun</li>
+		            </ul>
+		          </li>
+		        </ul>
+		      </li>
+		    </ul>
+		  </li>
+</ul>
+  </div>
+  <div class="column" style="background-color:#1ddd;">
+    <h2>Description 4</h2>
+     <ul id="myUL">
+		  <li><span class="caret">Beverages</span>
+		    <ul class="nested">
+		      <li>Water</li>
+		      <li>Coffee</li>
+		      <li><span class="caret">Tea</span>
+		        <ul class="nested">
+		          <li>Black Tea</li>
+		          <li>White Tea</li>
+		          <li><span class="caret">Green Tea</span>
+		            <ul class="nested">
+		              <li><a href="http://agilent.com">Sencha</a></li>
+		              <li>Gyokuro</li>
+		              <li>Matcha</li>
+		              <li>Pi Lo Chun</li>
+		            </ul>
+		          </li>
+		        </ul>
+		      </li>
+		    </ul>
+		  </li>
+</ul>
+  </div>
+</div>
+
+<script>
+var toggler = document.getElementsByClassName("caret");
+var i;
+
+for (i = 0; i < toggler.length; i++) {
+  toggler[i].addEventListener("click", function() {
+    this.parentElement.querySelector(".nested").classList.toggle("active");
+    this.classList.toggle("caret-down");
+  });
+}
+</script>
+
+</body>
+</html>
