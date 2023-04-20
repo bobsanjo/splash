@@ -14,7 +14,7 @@
   float: left;
   width: 25%;
   padding: 10px;
-  height: 700px; /* Should be removed. Only for demonstration */
+  height: 780px; /* Should be removed. Only for demonstration */
 }
 
 /* Clear floats after the columns */
@@ -64,11 +64,20 @@ ul, #myUL {
 .active {
   display: block;
 }
+
+  body {
+        background-image: url('a1.jpg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+      }
+
 </style>
 
 
 </head>
 <body>
+<font face=arial>
 <h2>Information Surfing in 3 Clicks (simple HTML page)</h2>
 
 
@@ -83,6 +92,7 @@ ul, #myUL {
 	      <li>Coffee</li>
 	      <li><span class="caret">Colleges</span>
 	        <ul class="nested">
+	          <img src="icon_1.png" width=7%>
 	          <li><a href="http://stanford.edu" target="_blank">Stanford</a></li>
 	          <li><a href="http://ucla.edu" target="_blank">UCLA</a></li>
 	          <li><a href="http://yale.edu" target="_blank">Yale</a></li>
@@ -90,6 +100,7 @@ ul, #myUL {
 	          <li><a href="http://uoregon.edu" target="_blank">Oregon</a></li>
 	          <li><span class="caret">Green Tea</span>
 	            <ul class="nested">
+	            <img src="icon_3.png" width=7%>
 	              <li><a href="https://readingramos.weebly.com/uploads/7/5/8/7/75872581/the_great_gatsby_chapter_1.pdf" target="_blank">Great Gatsby ch 1</a></li>
 	              <li>Gyokuro</li>
 	              <li>Matcha</li>
@@ -111,11 +122,11 @@ ul, #myUL {
 	  </li>
 </ul>
   </div>
-  <div class="column" style="background-color:#bbb;">
+  <div class="column" style="background-color:#12eaa2;">
     <h2>Description 2</h2>
     <img src="icon_2.png" width=25%>
      <ul id="myUL">
-		  <li><span class="caret">Beverages</span>
+		  <li><span class="caret">Something Else</span>
 		    <ul class="nested">
 		      <li>Water</li>
 		      <li>Coffee</li>
@@ -141,7 +152,7 @@ ul, #myUL {
     <h2>Description 3</h2>
     <img src="icon_3.png" width=25%>
      <ul id="myUL">
-		  <li><span class="caret">Beverages</span>
+		  <li><span class="caret">Something Else Also</span>
 		    <ul class="nested">
 		      <li>Water</li>
 		      <li>Coffee</li>
@@ -217,6 +228,8 @@ for (i = 0; i < toggler.length; i++) {
   });
 }
 </script>
+
+Copyright 2023, XYZ Corporation. All rights reserved.
 
 </body>
 </html>
